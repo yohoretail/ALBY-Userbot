@@ -2,7 +2,7 @@ FROM ayiinxd/ayiin-userbot:buster
 RUN git clone -b ALBY-Userbot https://github.com/PunyaAlby/Projects /home/alby/ \
     && chmod 777 /home/alby \
     && mkdir /home/alby/bin/
-
+EXPOSE. 3000
 COPY ./sample_config.env ./config.env* /home/alby/
 
 WORKDIR /home/alby/
